@@ -70,3 +70,17 @@ def modern_print(st):
         print(st)
         modern_print_list.append(st)
     return 0
+
+# Задание 5 
+# Напишите функцию is_palindrome, которая принимает
+#  натуральное число, строку, кортеж или список,
+#  а возвращает логическое значение:
+#  True — если передан палиндром, а в противном случае — False.
+
+def is_palindrome(x):
+    if isinstance(x, (list, tuple)): #это список или кортеж?
+        st = ''.join(map(str, x))               #сделаем строкой 
+        # (join не переваривает числа, поэтому map делает каждый элемент типом str)
+    else:
+        st = str(x)
+    return st == st[::-1]
