@@ -59,3 +59,14 @@ def month(numMonth, lang):
         return 0
     return (monthMain.get(lang)[numMonth-1]).capitalize()
 
+
+# Задание 4
+# Разработайте функцию modern_print, которая принимает
+# строку и выводит её, если она не была выведена ранее.
+
+modern_print_list = []
+def modern_print(st):
+    if st not in modern_print_list:
+        print(st)
+        modern_print_list.append(st)
+    return 0
