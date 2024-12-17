@@ -75,6 +75,7 @@ plt.xticks(np.arange(-5, 1, 0.25))
 plt.yticks(np.arange(-140, 200, 20))
 plt.gca().set_xticks(np.arange(-5, 1, 0.025), minor=True)
 plt.gca().set_yticks(np.arange(-140, 200, 2), minor=True)
+plt.tick_params( which='both', direction='in')
 plt.xlim([-5, 1])
 plt.ylim([-140, 200])
 
@@ -107,12 +108,21 @@ plt.xticks(np.arange(0.500, 0.800, 0.020))
 plt.yticks(np.arange(2.4, 5.6, 0.2))
 plt.gca().set_xticks(np.arange(0.500, 0.800, 0.0020), minor=True)
 plt.gca().set_yticks(np.arange(2.4, 5.6, 0.02), minor=True)
+plt.tick_params( which='both', direction='in')
 plt.xlim([0.500, 0.800])
 plt.ylim([2.4, 5.6])
 
 equasion = np.polyfit(X1, Y3, 1)
 # print(equasion)
 plt.plot(X1, X1*equasion[0] + equasion[1])
+
+# Вывод
+
+# print(dX)
+
+# print(dY3)
+
+# print(dY)
 
 print(f'k = {equasion[0]}, b = {equasion[1]}')
 
